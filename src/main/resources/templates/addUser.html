@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add User</title>
+</head>
+<body>
+    <h1>Add User</h1>
+    <form  action="/adduser" method="get">
+        <label for="userId">ID:</label>
+        <input type="text" id="userId" name="userId"><br><br>
+
+        <label for="idType">ID Type:</label>
+        <select id="idType" name="idType">
+            <option value="passport">Passport</option>
+            <option value="driverLicense">Driver's License</option>
+            <option value="nationalID">National ID</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" name="userName"><br><br>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" name="contactNumber"><br><br>
+
+        <label for="vaccineName">Vaccine Name:</label>
+        <input type="radio" id="covaxin" name="vaccineName" value="Covaxin">
+        <label for="covaxin">Covaxin</label>
+        <input type="radio" id="covishield" name="vaccineName" value="Covishield">
+        <label for="covishield">Covishield</label>
+        <input type="radio" id="sputnik" name="vaccineName" value="Sputnik">
+        <label for="sputnik">Sputnik</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

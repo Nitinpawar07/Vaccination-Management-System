@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Show User Data</title>
+    <style>
+        /* Basic CSS for styling the user data display */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Show User Data</h1>
+    </div>
+
+    <form action="/showUser2" method="get"> 
+    <div class="container">
+        <h2>Show All Users</h2>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Contact Number</th>
+                <th>Id Type</th>
+                <th>Vaccine Name</th>
+
+            </tr>
+            
+            <tr th:each="item : ${userdata}">
+              <td th:text="${item.id}"></td>
+              <td th:text="${item.Name}"></td>
+              <td th:text="${item.contact}"></td>
+              <td th:text="${item.idtype}"></td>
+              <td th:text="${item.vaccine_name}"></td>
+            </tr>
+            
+            
+            
+            
+                
+           
+        </table>
+    </div>
+</form>
+</body>
+</html>

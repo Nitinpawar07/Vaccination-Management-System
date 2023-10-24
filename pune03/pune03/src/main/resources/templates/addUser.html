@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        form {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        input[type="radio"] {
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #0074cc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056a4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add User</h1>
+    <form action="/adduser" method="get">
+        <label for="userId">ID:</label>
+        <input type="text" id="userId" name="id" required>
+
+        <label for="idType">ID Type:</label>
+        <select id="idtype" name="idtype" required>
+            <option value="passport">Passport</option>
+            <option value="Election card">Election Card</option>
+            <option value="Pan card">Pan Card</option>
+            <option value="Adhar card">Adhar Card</option>
+        </select>
+
+        <label for="userName">Name:</label>
+        <input type="text" id="Name" name="Name" required>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contact" name="contact" required>
+
+        <label for="vaccineName">Vaccine Name:</label>
+        <input type="radio" id="covaxin" name="vaccine_name" value="Covaxin">
+        <label for="covaxin">Covaxin</label>
+        <input type="radio" id="covishield" name="vaccine_name" value="Covishield">
+        <label for="covishield">Covishield</label>
+        <input type="radio" id="sputnik" name="vaccine_name" value="Sputnik">
+        <label for="sputnik">Sputnik</label>
+
+        <input type="submit" value="Submit" name="submit">
+    </form>
+</body>
+</html>
