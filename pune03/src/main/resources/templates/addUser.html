@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Add User</title>
+    <link rel="stylesheet" href="../static/adduserpage.css" th:href="@{css/adduserpage.css}">
+</head>
+
+<body>
+    <h1>Add User</h1>
+    <form action="/adduser" method="get">
+        <label for="userId">ID:</label>
+        <input type="text" id="userId" name="id" required>
+
+        <label for="idType">ID Type:</label>
+        <select id="idtype" name="idtype" required>
+            <option value="passport">Passport</option>
+            <option value="Election card">Election Card</option>
+            <option value="Pan card">Pan Card</option>
+            <option value="Adhar card">Adhar Card</option>
+        </select>
+
+        <label for="userName">Name:</label>
+        <input type="text" id="Name" name="Name" required>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contact" name="contact" required>
+
+        <label for="vaccineName">Vaccine Name:</label>
+        <input type="radio" id="covaxin" name="vaccine_name" value="Covaxin">
+        <label for="covaxin">Covaxin</label>
+        <input type="radio" id="covishield" name="vaccine_name" value="Covishield">
+        <label for="covishield">Covishield</label>
+        <input type="radio" id="sputnik" name="vaccine_name" value="Sputnik">
+        <label for="sputnik">Sputnik</label>
+
+        <input type="submit" value="Submit" name="submit"><br>
+        <i><a href="/index"> Back</a></i>
+    </form>
+</body>
+
+</html>
