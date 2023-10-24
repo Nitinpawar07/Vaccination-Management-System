@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Pune03Application<pune03>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "www.amber.pune03.Pune03Application",
+            "projectName": "pune03",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
